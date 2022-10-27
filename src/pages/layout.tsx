@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { Toaster } from "react-hot-toast";
 
-export const Layout = ({ children }: any) => {
+const Layout = ({ children }: any) => {
     return (
         <>
             <Head>
@@ -24,3 +24,5 @@ export const Layout = ({ children }: any) => {
         </>
     );
 };
+
+export default Layout;

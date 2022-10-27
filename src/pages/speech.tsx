@@ -1,10 +1,10 @@
 import { NextPage } from "next";
 import { useState } from "react";
 import Dropzone from "../components/Dropzone";
-import { Layout } from "./layout";
+import Layout from "./layout";
 
 const Speech: NextPage = () => {
-    const [url, setUrl] = useState("http://127.0.0.1:8000/send-audio");
+    const [url] = useState("http://127.0.0.1:8000/send-audio");
     return (
         <Layout>
             <div className="polkadot min-h-screen">
