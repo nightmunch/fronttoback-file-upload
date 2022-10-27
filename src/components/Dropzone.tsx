@@ -14,7 +14,7 @@ const Dropzone = ({ requestURL }: { requestURL: string }) => {
     });
 
     const handleFile = async (url: string) => {
-        var formData = new FormData();
+        let formData = new FormData();
         acceptedFiles.map((file) => {
             formData.append("file", file, file.name);
         });
@@ -39,7 +39,7 @@ const Dropzone = ({ requestURL }: { requestURL: string }) => {
                 >
                     <input {...getInputProps()} />
                     <p>
-                        Drag 'n' drop some files here, or click to select files
+                        Drag and drop some files here, or click to select files
                     </p>
                 </div>
             </div>
@@ -56,7 +56,7 @@ const Dropzone = ({ requestURL }: { requestURL: string }) => {
                             </thead>
                             <tbody>
                                 {acceptedFiles.map((file, id) => (
-                                    <tr>
+                                    <tr key={id}>
                                         <td>{file.name}</td>
                                         <td>{file.type}</td>
                                         <td>{file.size} bytes</td>
