@@ -14,7 +14,7 @@ const Dropzone = ({ requestURL }: { requestURL: string }) => {
     });
 
     const handleFile = async (url: string) => {
-        let formData = new FormData();
+        const formData = new FormData();
         acceptedFiles.map((file) => {
             formData.append("file", file, file.name);
         });
