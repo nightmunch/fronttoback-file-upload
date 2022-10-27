@@ -22,10 +22,7 @@ const Dropzone = ({ requestURL }: { requestURL: string }) => {
             method: "post",
             url,
             data: formData,
-            headers: {
-                "Content-Type": "multipart/form-data",
-                "Access-Control-Allow-Origin": "*",
-            },
+            headers: { "Content-Type": "multipart/form-data" },
         });
 
         toast.success(res.data.message);
